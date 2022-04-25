@@ -2,13 +2,6 @@ import json
 import argparse
 import sys
 
-class Eparser(argparse.ArgumentParser):
-    def error(self, message):
-        sys.stderr.write('error: %s\n' %message)
-        self.print_help()
-        sys.exit(2)
-
-parser=Eparser
 
 parser = argparse.ArgumentParser(
     description='Extract required fasta from json by taxafinder.',
